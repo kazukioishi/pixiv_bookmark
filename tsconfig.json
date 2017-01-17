@@ -5,7 +5,7 @@
         "noImplicitAny": false,
         "sourceMap": true,
         "outDir": "out/",
-        "outFile": "out/pixiv_bookmark.js"
+        "outFile": "out/pixiv_bookmark.user.js"
     },
     "files": ["typings/index.d.ts","type/midare.d.ts","pixiv_bookmark.ts","findbookmark.ts","main.ts"]
 }
