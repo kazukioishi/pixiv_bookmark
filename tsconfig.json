@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "module": "system",
+        "target": "es5",
+        "noImplicitAny": false,
+        "sourceMap": true,
+        "outDir": "out/",
+        "outFile": "out/pixiv_bookmark.js"
+    },
+    "files": ["typings/index.d.ts","type/midare.d.ts","pixiv_bookmark.ts","findbookmark.ts","main.ts"]
+}
