@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         pixivで即ブックマークするやつ
+// @name         pixivEasyBookmark
 // @namespace    http://myskng.xyz/
 // @version      0.1
 // @description  モバイル版みたいにすぐにブックマークできるようにするやつ
