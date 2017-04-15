@@ -4,8 +4,14 @@ namespace pixiv_bookmark {
         var style: string = GM_getResourceText('toastr');
         GM_addStyle(style);
 
-        $(".bookmark-container").append('<a href="javascript:void(0)" style="display:none" id="us_bookmark" class="_button">即ブックマークする</a>');
-        $(".bookmark-container").append('<a href="javascript:void(0)" style="display:none" id="us_unbookmark" class="_button">ブックマークを外す</a>');
+        $(".bookmark-container").append(`<a href="javascript:void(0)" style="display:none" id="us_bookmark" class="_bookmark-toggle-button add-bookmark">
+                                        <span class="bookmark-icon"></span>
+                                        <span class="description">即ブックマークする</span>
+                                        </a>`);
+        $(".bookmark-container").append(`<a href="javascript:void(0)" style="display:none" id="us_unbookmark" class="_bookmark-toggle-button add-bookmark">
+                                        <span class="bookmark-icon"></span>
+                                        <span class="description">ブックマークを外す</span>
+                                        </a>`);
 
         ($(".edit-bookmark").length == 0) ? $("#us_bookmark").show() : $("#us_unbookmark").show();
 

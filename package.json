@@ -1,0 +1,10 @@
+{
+   "scripts" : {
+      "postinstall": "typings install",
+      "build": "ts-node make.ts"
+   },
+   "dependencies" : {
+       "typescript" : "^2.2.2",
+       "typings" : "^2.1.1"
+   }
+}
