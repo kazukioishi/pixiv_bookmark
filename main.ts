@@ -22,7 +22,7 @@ namespace pixiv_bookmark {
     function onBookmarkClick() {
         $.ajax({
             type: "POST",
-            url: `http://www.pixiv.net/bookmark_add.php?id=${pixiv.context.illustId}`,
+            url: `//www.pixiv.net/bookmark_add.php?id=${pixiv.context.illustId}`,
             data: {
                 "mode": "add",
                 "tt": pixiv.context.token,
@@ -46,7 +46,7 @@ namespace pixiv_bookmark {
         scraper.findIDFromIllustID(pixiv.context.illustId, function (contextid: string) {
             $.ajax({
                 type: "POST",
-                url: "http://www.pixiv.net/bookmark_setting.php",
+                url: "//www.pixiv.net/bookmark_setting.php",
                 data: {
                     "type": "",
                     "tt": pixiv.context.token,

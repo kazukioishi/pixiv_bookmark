@@ -5,7 +5,7 @@ namespace pixiv_bookmark.scraper {
             var counter: number = pageid;
             $.ajax({
                 type: "GET",
-                url: `http://www.pixiv.net/bookmark.php?rest=show&p=${pageid}`,
+                url: `//www.pixiv.net/bookmark.php?rest=show&p=${pageid}`,
                 success: function (data) {
                     var retflag: boolean = false;
                     $(data).find(".image-item").each(function (index, val) {
