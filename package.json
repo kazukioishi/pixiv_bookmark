@@ -1,10 +1,11 @@
 {
    "scripts" : {
-      "postinstall": "typings install",
-      "build": "ts-node make.ts"
+      "postinstall": "$(npm bin)/typings install",
+      "build": "$(npm bin)/ts-node make.ts"
    },
    "dependencies" : {
        "typescript" : "^2.2.2",
-       "typings" : "^2.1.1"
+       "typings" : "^2.1.1",
+       "ts-node": "^3.0.2"
    }
 }
