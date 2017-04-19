@@ -15,8 +15,8 @@ namespace pixiv_bookmark {
 
         ($(".edit-bookmark").length == 0) ? $("#us_bookmark").show() : $("#us_unbookmark").show();
 
-        $('#us_bookmark').on('click', function () { onBookmarkClick() });
-        $('#us_unbookmark').on('click', function () { onUnBookmarkClick() });
+        $('#us_bookmark').on('click', () => onBookmarkClick());
+        $('#us_unbookmark').on('click', () => onUnBookmarkClick());
     }
 
     function onBookmarkClick() {
@@ -33,7 +33,7 @@ namespace pixiv_bookmark {
                 "tag": "",
                 "restrict": "0"
             },
-            success: function (j_data: string) {
+            success: (j_data: string) => {
                 toastr["success"]("ブックマークに追加しました");
                 $('#us_bookmark').hide();
                 $('#us_unbookmark').show();
@@ -58,8 +58,13 @@ namespace pixiv_bookmark {
                     "add_tag": "",
                     "del": "ブックマーク解除"
                 },
-                success: function (j_data: string) {
-                    toastr["success"]("ブックマークを解除しました");
+                success: (j_data: string) => {
+                    toastr.success("ブックマークを解除しました");
+                    $('#us_bookmark').show();
+                    $('#us_unbookmark').hide();
+                },
+                error: () => {
+                    toastr.warning("(多分)ブックマークを解除しました");
                     $('#us_bookmark').show();
                     $('#us_unbookmark').hide();
                 }

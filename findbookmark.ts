@@ -6,7 +6,7 @@ namespace pixiv_bookmark.scraper {
             $.ajax({
                 type: "GET",
                 url: `//www.pixiv.net/bookmark.php?rest=show&p=${pageid}`,
-                success: function (data) {
+                success: (data) => {
                     var retflag: boolean = false;
                     $(data).find(".image-item").each(function (index, val) {
                         if ($(this).find("img")[0].getAttribute("data-id") == illustid) {
@@ -17,7 +17,7 @@ namespace pixiv_bookmark.scraper {
                     });
                     //if not found
                     counter++;
-                    if(counter > 100 || retflag) return;
+                    if (counter > 100 || retflag) return;
                     doajax(counter); //call myself
                 }
             });
