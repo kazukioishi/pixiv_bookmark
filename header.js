@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         pixivEasyBookmark
 // @namespace    http://myskng.xyz/
-// @version      0.1.2
+// @version      0.1.3
 // @description  モバイル版みたいにすぐにブックマークできるようにするやつ
 // @author       myskng
 // @require      https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js
